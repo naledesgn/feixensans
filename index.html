@@ -1,0 +1,344 @@
+<!doctype html>
+
+<html>
+	
+<head>
+
+<meta charset="UTF-8">
+
+<title> Feixen Sans Display </title>
+	
+<!-- Attach the CSS file here: Go to Tools > CSS > Attach Style Sheet… and choose the css inside the Project 2 root folder. --> 
+		
+<link href="proj2_specimen_page.css" rel="stylesheet" type="text/css">
+</head>
+	
+	
+	
+<!-- For this project, start with the tags below by inserting content from the Word file supplied to you (word bank of words/info about public parks), and insert it into the appropriate tags. The html can be re-organized if it will better suit your layout and design plans, but the content areas defined with the main tags below need to be used. -->	
+	
+	
+<body>
+
+	<!-- The parent component -->
+<div id="curtain">
+
+  		<!-- The component wrapper -->
+  		<div class="curtain-wrapper">
+  		  
+  		  <!-- The checkbox hack! -->
+  		  <input class="curtain-checkbox" type="checkbox" checked>
+  		  <!-- The left curtain panel -->
+  		  <div class="curtain-panel curtain-panel-left"> 
+				<div class="sticker-blue sticker-fun">
+					<p class="sticker-text">I'm fun!</p>
+			 	</div>
+			  
+			  
+			  	<div class="sticker-blue sticker-scroll">
+			  		<p class="sticker-text">Scroll down ↓</p>
+			  	</div>
+			
+			</div>
+  		  
+  		  <!-- The prize behind the curtain panels -->
+  		  <div class="curtain-prize">
+				<header>
+					<h1 class="flexible"> Feixen Sans </h1>
+					<p>&nbsp;</p>
+					
+					<div class="sticker-pink sticker-typeface">
+					<p class="sticker-inside-1"> I'm a typeface!</p>
+			 		</div>
+				</header>
+  		  </div> <!-- curtain__prize -->
+  		  
+  		  <!-- The right curtain panel -->
+  		  <div class="curtain-panel curtain-panel-right">
+			  
+			  		<div class="sticker-blue sticker-flexible">
+					<p class="sticker-text">I'm flexible!</p>
+			 		</div>
+			  
+  		    		<div class="intro-sticker">
+                	<p class="intro-sticker-text"> Click to know my name! </p>
+            		</div>
+  		  </div> <!-- curtain__panel -->
+  		  
+  		</div> <!-- curtain__wrapper -->
+</div> <!-- curtain -->
+	
+ <!-- Let’s give this div an id called wrapper. -->
+	
+	
+		
+	<nav> <!-- Here, you’ll create anchor links for each text item in the list that will take us to their corresponding sections deeper down in the page. -->
+		<ul>
+			<li> <a href="#one_character_display"> The Character Set </a></li>
+			<li> <a href="#two_display_level_type"> Great for Display </a></li>
+			<li> <a href="#three_body_copy_samples">Body Copy </a> </li>
+			<li><a href="#four_microtypesetting"> Microtype </a> </li>
+		</ul>
+	</nav>
+<div class="pad">
+	<div class="intro">
+	<h2> A Digital Type Specimen </h2> <!-- Subtitle; you can use this subhead or write one yourself. -->
+	<p class="intro-text"> 
+	  Feixen Sans is a friendly and slightly naive sans serif typeface with a geometric base. It offers a unique combination of clarity and warmth, making it suitable for various projects, from headlines and branding to body text and commercial graphics. The font includes <strong>several stylistic options</strong> and <strong>a variable version</strong> for further customization.</p>
+	</div>
+	
+	
+	<article>
+
+	  <section id="one_character_display"> 
+			
+			<h3> The Character Set </h3>
+			
+			<!-- Make a cool presentation of the characters in the typeface in this section. Use AT LEAST ONE of the following mark-up types for the character set. One approach is marked up all within a p tag ("alphabet_chunk"). The second option below is marked up as an unordered list with list items ("alphabet_tiles"); this one will be friendly to using CSS grid for its layout. -->
+			
+			<p class="character_chunk"> A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <em>a b c d e f g h i j k l m n o p q r s t u v w x y z</em> <strong>0 1 2 3 4 5 6 7 8 9 ? ! $ % [ ] { } </strong></p>
+			
+			
+		<ul class="character_showcase">
+				<li class="serif-hover">Aa</li>
+				<li class="edgy-hover">Bb</li>
+				<li class="serif-hover">Cc</li>
+				<li class="serif-hover">Dd</li>
+				<li class="serif-hover">Ee</li>
+				<li class="edgy-hover">Ff</li>
+				<li class="edgy-hover">Gg</li>
+				<li class="serif-hover">Hh</li>
+				<li class="writer-hover">Ii</li>
+				<li class="serif-hover">Jj</li>
+				<li class="edgy-hover">Kk</li>
+				<li class="serif-hover">Ll</li>
+				<li class="writer-hover">Mm</li>
+				<li class="edgy-hover">Nn</li>
+				<li class="serif-hover">Oo</li>
+				<li class="serif-hover">Pp</li>
+				<li class="serif-hover">Qq</li>
+				<li class="edgy-hover">Rr</li>
+				<li class="serif-hover">Ss</li>
+				<li class="writer-hover">Tt</li>
+				<li class="edgy-hover">Uu</li>
+				<li class="serif-hover">Vv</li>
+				<li class="writer-hover">Ww</li>
+				<li class="serif-hover">Xx</li>
+				<li class="serif-hover">Yy</li>
+				<li class="serif-hover">Zz</li>
+			<!--</ul>-->
+			
+			<!--<ul class="number_tiles">-->
+				<li class= "number">0</li>
+				<li class= "number">1</li>
+				<li class= "number">2</li>
+				<li class= "number">3</li>
+				<li class= "number">4</li>
+				<li class= "number">5</li>
+				<li class= "number">6</li>
+				<li class= "number">7</li>
+				<li class= "number">8</li>
+				<li class= "number">9</li>
+			<!--</ul>-->
+
+			<!--<ul class="punctuation_tiles">-->
+				<li class="symbols">?</li>
+				<li class="symbols">!</li>
+				<li class="symbols">$</li>
+				<li class="symbols">%</li>
+				<li class="symbols"> [ ] </li>
+		  <li class="symbols"> { } </li>
+			</ul>
+		</section> 
+		
+		
+		<section id="two_display_level_type"> 
+			
+			<h3 class="pink"> Feixen Sans: Distinctive as a display type </h3> <!-- Feel free to re-write this h3 heading (and the other h3 headings) -->
+			
+			<!-- Choose at least three sample words from the word bank file to place into the following h4 tags, and style them each a different way in the CSS to showcase the typeface’s versatility as a display font. Create different IDs for the h4 tags to differentiate them from one another. Feel free to create more than three. Consider featuring differences in the typeface weights and styles. Size the samples so that you can appreciate the typeface design (make them big and beautiful). 
+			Dragonboat Festival
+			KiteFest
+			Concerts
+			Zoo visits for kids
+			Night Walks
+			Festivals
+			Baseball tournaments
+			Family Reunions -->
+			
+		  <h4 class="two_display_text big edgy-book display"> Dragonboat <span class="pink flexible">Festival</span> </h4> 
+			<h4 class="two_display_text center small serifwriter-bold marginauto display bubble1"> KiteFest</h4>
+		  <h4 class="two_display_text right medium kerning marginauto display"> Concerts </h4>
+		  <h4 class="two_display_text serif small italic display"> Zoo visits for kids </h4>
+			<h4 class="two_display_text small right display"> Night Walks </h4>
+		  <h4 class="two_display_text edgy-bold big center marginauto swipein display"> Festivals </h4>
+			<h4 class="two_display_text medium display bubble2"> Baseball tournaments </h4>
+		  <h4 class="two_display_text writer big right display"> Family Reunions </h4>
+			
+	  </section> 
+		
+
+		<section id="three_body_copy_samples"> 
+			
+			<h3> Set beautiful body copy with Feixen Sans </h3>
+			
+			<!-- Insert paragraphs from the word bank in the following paragraph tags. Style each paragraph a different way to showcase the typeface’s versatility in the typesetting of body copy. Create different IDs for the p tags to differentiate them from one another. Include at least three different typesetting samples in this section. 
+			
+
+-->
+			<div id="three_body">
+			
+			<div class="pink small">
+					<strong>Central Park: An Anthology</strong>
+					<div class="italic">By Adrian Benepe</div>
+		  </div>
+		  <div id="three_paragraphs">
+				
+			<p class="parachunk">
+				I recently had the opportunity to record an oral history of New York City’s parks for a high-tech start- up. The software wizards there created a Web-based map of the world and asked people near and far comedians, bartenders, professors, city servants— to talk about their pieces of the world. Mine involves approximately five thousand pieces of property under the jurisdiction of the NYC Department of Parks & Recreation, our parks, playgrounds, beaches, recreation facilities, meadows, and woodlands covering more than twenty- nine thousand acres, about 14 percent of the city. Yet I found myself telling not one, not two, but three tales of Central Park. The first described a few of the park’s quirky characters, the second discussed the amazing temporary art installation known as The Gates, and the third covered the great statues and monuments featured along Literary Walk and throughout the park’s great expanse.
+				
+			</p>	
+				
+			<p class="writer medium_text">
+				When I was in college, I had a summer job, perhaps my most interesting summer job, as a pushcart vendor in Central Park. It was an enormous pushcart that belonged to the Front Porch restaurant on the West Side of Manhattan. This was in the summer of 1976, the summer of the Bicentennial celebration, the tall ships, and fireworks, when disco was ascendant and A Chorus Line opened on Broadway. It was a summer when NYC was mostly grimy and decrepit, with stifling subway cars covered in graffiti, but there were signs that all was not lost. It was also a summer when a girl I had just met at Middlebury College came to visit from her home in California, and Charlotte Glasser fell in love with New York, and would later marry me in Central Park.
+			</p>
+			<p class="serif small_text"> 
+		    Every day, I would get my cart and fill it up with tureens of cold soup and interesting fruit breads and push it— all six hundred pounds of it— from West Eighty- second Street to Fifty- ninth Street. I sold food at lunchtime at the south end of the park, and then, after lunch, I pushed the cart to the Delacorte Theater, outside of which I sold food at dinnertime. Though the cart lacked a Parks permit and the restaurant did not inform me that I needed one, no one enforced the rules at the time. There was a passel of other vendors selling creative food, and a few classic hot dog/pretzel guys who likely had real permits. Every once in a while a police officer would show up and shoo us away, but we would come back and sell our soup, falafel, or tacos. (The charismatic guy who sold falafel would shout out to prospective customers, <strong>“Falafel— Will Not Make You Feel . . . Awful!”</strong>) We banded together and enjoyed friendly competition, except for the two hot dog guys, who once had a fight that ended with one stabbing the other in his arm with a large hot dog fork. During this time, I came to know a lot of the people who seem slightly unreal to me now. </p>		
+
+			<p class="edgy-book"> 	
+		    When we refer to the <strong class="small">“bad old days”</strong> of Central Park, we are usually talking about the days of rampant crime, graffiti, abandoned buildings, bare lawns, and dead trees. And yet I miss some aspects of those old days. In particular, Central Park was home to a lot of “characters” who added to the atmosphere, but who, for the most part, are not there anymore.</p>
+			  </div>
+			<!--
+			<p> 
+				One of the characters I met, the Poet O, trundled around Central Park with a shopping cart. He had a bushy white beard and he would ring a handbell. If you gave him money, he thanked you by reciting a poem that he composed on the spot, a sort of blank verse. He made promises to cure paying listeners of sexual diseases by ringing his bell. I talked with him often, and once he realized that I didn’t have the means to pay him for his wisdom, he dispensed it for free. Among other things, he explained to me the value of Central Park as a large, outdoor sanitorium. He said he was mentally ill, and the park enabled him to get out of his single room in a West Side hotel and be out in nature— not elbow to elbow with people— where he could experience what he called “the natural medication of nature.” The park, he explained, was saving the government huge amounts of money by allowing mentally ill people to “self- medicate” through the intoxicants of the romantic landscape and avoid expensive mental hospitals and drugs.
+		  </p>		
+			
+			<p>
+				Another character, a flamboyant man with a pompadour, toured the park on an elaborate bicycle, pulling a tricycle with a red wagon behind it. A series of enormous tropical birds, cockatoos and parrots, rode on the tricycle and wagon behind him as he circled the park, allowing people to admire his birds. Perhaps the best known was Adam Purple, with his long flowing white beard and purple, tie- dyed clothes, who traveled the park on his purple bicycle picking up horse manure to compost in his garden on the Lower East Side. For a while, a woman in purple, whom he called Eve, accompanied him.
+		  </p>
+			<p>
+				A hippie named “Mountain,” who had long, dirty- blond hair, played Frisbee every day by the Naumburg Bandshell. The Bandshell was where the other hippie kids hung out. Mountain, not one of the rich kids from Central Park West or Fifth Avenue, was lean and muscular and had the air of a Westie from Hell’s Kitchen. He knew how to throw a Frisbee better than anyone else and served as a kind of Peter Pan leader of the Lost Boys (and girls) of that generation. But Frisbee wasn’t his only talent. Mountain could commune with anyone, and he had to, because the area was habituated not only by middle- and upper- class teenagers, but also by a group of drug dealers who counted on the kids as customers. Soon enough, a new group would overtake the area— roller disco skaters in colorful outfits dancing to Donna Summer’s “Love to Love You Baby,” and then, in another summer, Chic singing “Le Freak” as dozens of skaters and hundreds of onlookers of all races and nationalities and sexual persuasions grooved and mingled and proved why New York City was the capital of where people just got along.
+			</p>
+			
+			<p>
+				
+				These were some of the Central Park characters. Today, they are not nearly as numerous. The Central Park Conservancy and New York City have invested six hundred million dollars in private and public funds to restore the glory of the nineteenth- century landscape in a way that suits twenty- first- century users. Ladies in hoop skirts and gentlemen in linen suits strolling along the paths have given way to both genders running and cycling in Lycra tops and bottoms that their predecessors would have seen as underwear. Or perhaps you simply cannot see the characters now that almost forty million visitors enter the park each year. I suppose it is better that the park is busier than ever rather than abandoned, which it essentially was back in the seventies. Maybe now you just have to look a little closer to find the characters.
+			</p> -->
+			</div>
+	  </section>
+
+		
+		
+		<section id="four_microtypesetting"> 
+			
+			<h3> Feixen Sans is great for microtypesetting needs </h3>
+			
+			<!-- Use the following tags inside the list elements (h4, h5, h6, and caption) to plug in corresponding info  from the word bank file. Then style them different ways to showcase the typeface’s informational abilities. Create different IDs for the tags to differentiate them. Aim for doing a fun assortment of at least 3 design approaches for the informational groupings; feel free to do more. 
+
+			--> 
+			
+			<ul class="paragraph_chunk">
+				<li class="micro1 whitebubble">
+					<h4 class="kitefest"> KiteFest 2024 </h4>
+					<h5 class="serif pink"> Competition & Sale </h5>
+					<h6 class="kitedate"> April 29 | starts at 10:00 a.m. </h6>
+					<p class="kite_caption"> 
+						Celebrate National Kite Month with the first major outdoor event of the season. Free activities will include kite flying, kite design competition, children’s games, kite sale and more. Free sunscreen will be available provided by Dermatology Associates.
+				  </p>
+				</li>
+
+				<li class="micro2 bluebuble">
+					<h4 class="micro2"> Spring Blooms Tour</h4>
+					<h5 class="tour_people"> The People’s Garden</h5>
+					<h6 class="tour_date"> Saturday, May 5 | 9:00 a.m.</h6>
+					<caption>  
+						Enjoy the explosion of color from our early spring plantings in the main garden. Bring your loved ones for a Mother’s Day outing.
+				  </caption>
+				</li >
+				
+				<li class="micro3 whitebubble">
+					
+					<h5 class="writer"> The Musketeers vs. The Warriors</h5>
+					<h6 class="baseballgame-date"> May 23 | 10:00 a.m. </h6>
+					<h4 class="baseballgame pink"> Little League Baseball Game</h4>
+					<caption>  
+						Will your hometown Muskies be able to hold back the undefeated Warriors? Grab a snack and drink from the new concession stand next to the field.
+					</caption>
+				</li>
+			<!--
+			  <li class="micro4 bluebuble">
+					<h4> Concert in the Park </h4>
+					<h5> Robin Lacy & DeZydeco</h5>
+					<h6> June 2 | 8:00 p.m.</h6>
+					<caption>   
+						Cajun rhythms will be flowing through the evening breeze as our town’s favorite Mardi Gras band celebrates their 30-year anniversary in the park amphitheater. Bring your dancing toes!
+				</caption>
+			  </li>
+				<li class="micro5 whitebubble">
+					<h4> Doggy Speed Date</h4>
+					<h5> Brush Creek Dog Park</h5>
+					<h6> Wednesday, July 14 | 7:00 p.m.</h6>
+					
+					<caption>  
+						Get the dogs out to find their one true, new best friend. In addition to speed dating, the event will  feature themed snacks for the dogs and owners and a special showing of Disney's "Lady and the Tramp.” 
+					</caption>
+				</li>
+				
+				<li class="micro6 bluebuble">
+					<h4> Yoga on the Lawn</h4>
+					<h5> Led by Lisa Flick</h5>
+					<h6> August 7 | 8:00 a.m. </h6>
+					
+					<caption>  
+						This event is free, open to the public, and all skill levels are welcome. Yoga will be instructed by Vista Studios. Please remember to bring your yoga mat, towel, and water bottle. In the event of inclement weather, you will be notified if this event will be moved to an appropriate indoors location.
+					</caption>
+				</li>
+			<!--
+			  <li>
+					<h4> Movie in the Park</h4>
+					<h5> Village Amphitheater</h5>
+					<h6> September 16 | 7:30 p.m.</h6>
+					<caption>  
+						This month, we’ll feature, Ralph Breaks the Internet for our Friday night movie. The Fire Department will offer some pre-show fun and giveaways including chairs, blankets and water bottles. Rain date for the movie is the following Friday.
+					</caption>
+				</li>-->
+
+		  </ul>	
+			
+		</section>
+	
+	</article>
+</div>	
+	<!-- You are welcome to add a concluding statement. A p tag would make sense here if you want to do that. -->
+	
+	<footer>
+		 
+		<p class="backtotop"><a href="#curtain" > Back to home </a></p>
+		<p class="foot"> Design by Na Le, 2024. <a href="https://fonts.studiofeixen.ch/sans/" target="_blank">Studio Feixen Sans</a> <!--Replace this sentence with the name of the font source (Google Web Fonts, for example) and make it link to the font source.--></p>
+	</footer>
+	
+	
+</body>
+</html>
+
+
+<!-- TIPS and NOTES FOR WORKING WITH HTML FILES, BELOW --> 
+
+<!-- TIP 1: HTML files are for CONTENT and our CSS files are for PRESENTATION. Separating them is important for organization. -->
+
+<!-- TIP 2: Remember, most elements have an opening AND closing tag with content between them. Ex: <h1>Title Text</h1> -->
+
+<!-- TIP 3: Use the tab key, vs spaces, to organize your content. -->
+
+<!-- TIP 4: Know that space is hard to control and is not visible within the html. The best starting point is using margin and padding settings in the correlating CSS, and preview often in the browser. -->
+
+<!-- NOTE: The body tag contains all content that will be visible inside a browser window on someone's device. -->
+
+<!-- NOTE: The header element is where we normally place our navigation and other repeated elements across all of our pages. Usually these elements are at the top of the page, but can go elsewhere. -->
+
+<!-- NOTE: The nav element is where the navigation code would normally go. Notice it is nested inside of the header element. -->
+
+<!-- NOTE: divs and block-level elements are the basic building blocks of HTML/CSS. Use them to separate (“chunkify”) content for CSS stlying. -->
+
+
+
