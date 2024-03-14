@@ -1,0 +1,852 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ----------------- PRIMARY LAYOUT CHUNKS ----------------- */
+
+/* ----------------- FONT FACE ----------------- */
+@font-face {
+	font-family: Studio Feixen Sans Variable;
+	src: url("fonts/Studio Feixen Sans Variable.ttf") format:('truetype');
+	font-weight: 100 800;
+	
+}
+@font-face {
+	font-family: Studio Feixen Sans Variable Trail;
+	src: url("fonts/Studio Feixen Sans Variable Trail.ttf") format: ('truetype');
+	font-weight: 100 800;
+}
+/*edgy*/
+@font-face{
+	font-family: StudioFeixenSansTrial-EdgyRegular;
+	src: url("fonts/StudioFeixenSansTrial-EdgyRegular.otf");
+}
+
+@font-face{
+	font-family: StudioFeixenSansTrial-EdgyMedium;
+	src: url("fonts/StudioFeixenSansTrial-EdgyMedium.otf");
+}
+
+@font-face{
+	font-family: StudioFeixenSansTrial-EdgyBook;
+	src: url("fonts/StudioFeixenSansTrial-EdgyBook.otf");
+}
+
+@font-face{
+	font-family: StudioFeixenSansTrial-EdgyBold;
+	src: url("fonts/StudioFeixenSansTrial-EdgyBold.otf");
+}
+
+/*writer*/
+@font-face{
+	font-family: StudioFeixenSansTrial-WriterRegular;
+	src: url("fonts/StudioFeixenSansTrial-WriterRegular.otf");
+}
+@font-face{
+	font-family: StudioFeixenSansTrial-WriterMedium;
+	src: url("fonts/StudioFeixenSansTrial-WriterMedium.otf");
+}
+@font-face{
+	font-family: StudioFeixenSansTrial-WriterBook;
+	src: url("fonts/StudioFeixenSansTrial-WriterBook.otf");
+}
+@font-face{
+	font-family: StudioFeixenSansTrial-WriterBold;
+	src: url("fonts/StudioFeixenSansTrial-WriterBold.otf");
+}
+
+/*serif*/
+@font-face{
+	font-family: StudioFeixenSerifTrial-Regular;
+	src: url("fonts/StudioFeixenSerifTrial-Regular.otf");
+}
+@font-face{
+	font-family: StudioFeixenSerifTrial-Medium;
+	src: url("fonts/StudioFeixenSerifTrial-Medium.otf");
+}
+@font-face{
+	font-family: StudioFeixenSerifTrial-Book;
+	src: url("fonts/StudioFeixenSerifTrial-Book.otf");
+}
+@font-face{
+	font-family: StudioFeixenSerifTrial-Bold;
+	src: url("fonts/StudioFeixenSerifTrial-Bold.otf");
+}
+
+/*serif writer*/
+@font-face{
+	font-family: StudioFeixenSerifTrial-WriterRegular;
+	src: url("fonts/StudioFeixenSerifTrial-WriterRegular.otf");
+}
+@font-face{
+	font-family: StudioFeixenSerifTrial-WriterMedium;
+	src: url("fonts/StudioFeixenSerifTrial-WriterMedium.otf");
+}
+@font-face{
+	font-family: StudioFeixenSerifTrial-WriterBook;
+	src: url("fonts/StudioFeixenSerifTrial-WriterBook.otf");
+}
+@font-face{
+	font-family: StudioFeixenSerifTrial-WriterBold;
+	src: url("fonts/StudioFeixenSerifTrial-WriterBold.otf");
+}
+
+/* ----------------- MAIN BIG SECTIONS ----------------- */
+html{ scroll-behavior: smooth;
+	
+}
+
+body {
+	font-family: Studio Feixen Sans Variable;
+	/*background-color: rgba(24,24,24,1.00);
+	color: white;*/
+	margin: auto;
+	color: darkblue;
+}
+
+/* ----------------- CURTAIN ----------------- */
+
+/* curtain trick from https://css-tricks.com/creating-css-sliding-door-effect/*/
+#curtain {
+  width: 100%; /* Ensures the component is the full screen width */
+  height: 100vh; /* We're using this for demo purposes */
+  overflow: hidden; /* Allows us to slide the panels outside the container without them showing */
+}
+  
+.curtain-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+input[type=checkbox] {
+  position: absolute; /* Force the checkbox at the start of the container */
+  cursor: pointer; /* Indicate the curtain is clickable */
+  width: 100%; /* The checkbox is as wide as the component */
+  height: 100%; /* The checkbox is as tall as the component */
+  z-index: 100; /* Make sure the checkbox is on top of everything else */
+  opacity: 0; /* hide the checkbox */
+	
+}
+
+/* Slide the first panel in */
+
+input[type=checkbox]:checked ~ .curtain-panel-left {
+  transform: translateX(0);
+	
+}
+        
+/* Slide the second panel in */
+input[type=checkbox]:checked ~ .curtain-panel-right {
+  transform: translateX(0);
+}
+      
+.curtain-panel {
+  background: rgba(255,192,203,95%);
+  width: 50%; /* Each panel takes up half the container */
+  height: 100vh; /* Used for demo purposes */
+  float: left; /* Makes sure panels are side-by-side */
+  position: relative; /* Needed to define the z-index */
+  z-index: 2; /* Places the panels in front of the prize */
+  transition: all 1s ease-out; /* Animates the sliding transition */
+  
+}
+
+.curtain-panel-left {
+  	transform: translateX(-100%);
+	/*border-bottom-right-radius: 10%;
+	border-top-right-radius: 10%;*/
+}
+
+.curtain-panel-right {
+  transform: translateX(100%);
+	/*border-bottom-left-radius: 10%;
+	border-top-left-radius: 10%;*/
+}
+  
+.curtain-prize {
+  background: none;
+  position: absolute; /* Forces the prize position into the container start */
+  z-index: 1; /* Places the prize behind the panels, which are z-index 2 */
+  width: 100%;
+ 
+}
+
+/* ----------------- STICKER ----------------- */
+.sticker-pink{
+	padding: 1em;
+	position: absolute;
+	border-radius: 20vh;
+	border:  solid 2px blue;
+	animation: rotate4;
+	animation-duration: 1s;
+	animation-direction:alternate;
+	animation-iteration-count: infinite;
+}
+.sticker-inside-1{
+	font-size: 3.3vh;
+	text-align: center;
+	margin:auto;
+	font-variation-settings: 'wght' 100;
+	color: blue;
+	
+}
+
+.sticker-typeface{
+	
+	padding: 3vh;
+	margin-top: -2vh;
+	margin-left: 41vw;
+}
+
+.sticker-blue{
+	z-index: 999;
+	position: absolute;
+	border-radius: 20vh;
+	background: blue;
+	
+}
+@keyframes rotate1{
+	0% {transform: rotate(10deg) scale(1.5)}
+	25% {transform: rotate(-30deg) scale(1)}
+	50% {transform: rotate(10deg) scale(1.5)}
+	100%{transform: rotate(-30deg) scale(1)}
+}
+@keyframes rotate2{
+	0% {transform: rotate(40deg) scale(0.8)}
+	100%{transform: rotate(10deg) scale(1.5)}
+}
+@keyframes rotate3{
+	0% {transform: rotate(0deg) }
+	100%{transform: rotate(360deg)}
+}
+@keyframes rotate4{
+	0% {transform: rotate(-10deg) }
+	100%{transform: rotate(10deg)}
+}
+
+
+.sticker-text{
+	font-size: 3.3vh;
+	text-align: center;
+	margin:auto;
+	font-variation-settings: 'wght' 100, "wdth"50;
+	color: white;
+	
+}
+
+.sticker-scroll{
+	width: 10vh;
+    height: 10vh;
+	z-index: 3;
+	border-radius: 100%;
+	padding: 3vh;
+	margin-top: 70vh;
+	margin-left: 23vw;
+	transform: rotate(10deg);
+	animation: rotate3;
+	animation-duration: 4s;
+	animation-direction:alternate;
+	animation-iteration-count: infinite;
+}
+.sticker-flexible{
+	width: 10vh;
+    height: 10vh;
+	z-index: 3;
+	border-bottom-left-radius: 0;
+	padding: 3vh;
+	margin-top: 30vh;
+	margin-left: 24vw;
+	transform: rotate(30deg);
+	animation: rotate2;
+	animation-duration: 2s;
+	animation-direction:alternate;
+	animation-iteration-count: infinite;
+}
+.sticker-fun{
+	width: 20vh;
+    height: 5vh;
+	
+	padding: 3vh;
+	margin-top: 18vh;
+	margin-left: 10vw;
+	transform: rotate(-30deg);
+	animation: rotate1;
+	animation-duration: 3s;
+	animation-direction:alternate;
+	animation-iteration-count: infinite;
+}
+
+.intro-sticker {
+    width: 20vh;
+    height: 20vh;
+	z-index: 3;
+	background: white;
+    position: absolute;
+	border-radius: 100%;
+	padding: 2vh;
+	margin-top: 35vh;
+	margin-left: -5em;
+	border: solid 2px blue;
+	animation: rotate4;
+	animation-duration: 2s;
+	animation-direction:alternate;
+	animation-iteration-count: infinite;
+	
+}
+
+p.intro-sticker-text {
+	text-align: center;
+	margin: auto;
+	margin-top: .5em;
+	padding: .5 em;
+	color: blue;
+	font-variation-settings: 'wght' 200;
+	font-size: 4vh;
+}
+/* ----------------- INTRODUCTION ----------------- */
+
+.intro{
+	background-color: white;
+	margin: auto;
+	padding: 4em;
+}
+.intro-text strong{
+	font-variation-settings: 'wght' 200, 'wdth'300;
+	color: pink
+}
+/* ----------------- LIST ----------------- */
+
+ul{
+	list-style: none;
+}
+
+/* ----------------- SECTION 1: CHARACTERS ----------------- */
+
+
+#one_character_display {
+	margin: auto;
+	padding: 5em;
+	background-color: pink;
+	color: blue;
+}
+
+
+p.character_chunk {
+	padding: 2em;
+	margin: auto;
+	margin-left: 2em; 
+	font-size: 2vw;
+	align-content: center;
+	text-align: center;
+	color: blue;
+	font-variation-settings: 'wght' 100, 'wdth'0;
+	transition: all .5s ease;
+}
+.character_chunk em{
+	font-variation-settings: 'wght' 200, 'wdth'0;
+}
+.character_chunk strong{
+	font-variation-settings: 'wght' 300, 'wdth'0;
+}
+.character_chunk:hover{
+	background-color: white;
+	transition: all .5s ease;
+	border-radius: 20vh; 
+	border: solid 1px blue;
+	
+}
+	
+ul.character_showcase {
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	grid-template-rows: auto;
+	grid-gap: 1em;
+	font-size: 2.5vw;
+	align-content: center;
+	justify-content: center;
+	padding: 2em;
+	margin: auto;
+}
+
+ul.character_showcase li {
+	list-style: none;
+	background-color: none;
+	text-align: center;
+	padding: .5em;
+	transition: all .5s ease;
+}
+ul.character_showcase li:hover{
+	transition: all .5s ease;
+	border-radius: 20vh; 
+	
+}
+.number{
+	font-variation-settings: "wght" 300;
+}
+
+.number:hover{
+	background-color: blue;
+	color:pink;
+	font-family: StudioFeixenSerifTrial-WriterBold;
+}
+
+.symbols{
+	font-variation-settings: "wght" 800;
+}
+
+.symbols:hover{
+	background-color: white;
+	color:pink;
+	
+	font-family: StudioFeixenSerifTrial-WriterBold;
+}
+
+.writer-hover:hover{
+	background-color: blue;
+	color:pink;
+	
+	font-family: StudioFeixenSansTrial-WriterRegular;
+}
+
+.serif-hover:hover{
+	background-color: white;
+	color:pink;
+	
+	font-family: StudioFeixenSerifTrial-Regular;
+}
+.edgy-hover:hover{
+	background-color: blue;
+	color: white;
+	
+	font-family: StudioFeixenSansTrial-EdgyRegular;
+}
+
+ul.number_tiles {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around
+
+}
+
+ul.punctuation_tiles {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+}
+
+
+
+/* ----------------- SECTION 2: DISPLAY-LEVEL TYPESETTING ----------------- */
+
+
+
+#two_display_level_type {
+	background-color: blue;
+	padding: 5em;
+	color: white;
+}
+.two_display_text{
+	margin-top: -0.05em;
+	font-variation-settings: "wght" 100, "wdth" 100;
+}
+.display{
+	transition: all .5s ease;
+}
+
+.display:hover{
+	transform: scale(0.95);
+	color:pink;
+	transition: all .5s ease;
+}
+.bubble1{
+	background-color: pink;
+	border-radius: 10vw;
+	color:blue;
+	padding: 1em;
+}
+.bubble1:hover{
+	color:white;
+}
+.bubble2{
+	background-color: white;
+	border-radius: 10vw;
+	color:blue;
+	padding: 1em;
+}
+
+.marginauto{
+	margin: auto;
+	padding: 1em;
+}
+.kerning{
+	letter-spacing: 0.1em;
+	
+}
+
+/* ----------------- SECTION 3: BODY COPY PARAGRAPHS ----------------- */
+
+
+
+#three_body_copy_samples {
+	padding: 5em;
+}
+#three_body{
+	padding: 4em;
+}
+#three_paragraphs{
+	/*display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	grid-gap: 50px;*/
+	
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+	animation-name: changeitalic;
+	animation-duration: 2s;
+	animation-direction:normal;
+	animation-iteration-count: infinite;
+}
+
+@keyframes changeitalic{
+	0% {font-style: normal}
+	100%{font-style: italic;}
+	
+}
+
+
+/* ----------------- SECTION 4: MICROTYPESETTING  ----------------- */
+
+
+
+#four_microtypesetting {
+	background-color: pink;
+	padding: 5em;
+}
+ul.paragraph_chunk{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	grid-gap: 50px;
+	
+}
+
+.whitebubble{
+	background-color: white;
+	border-radius: 4vw;
+	border-bottom-left-radius: 0;
+	padding: 2em;
+	position:relative;
+}
+.bluebuble{
+	background-color: blue;
+	border-radius: 4vw;
+	border-bottom-right-radius: 0;
+	padding: 2em;
+	color:white;
+	position:relative;
+}
+
+
+.micro3{
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	
+}
+
+/* ----------------- MISCELLANEOUS TYPESETTING ----------------- */
+
+
+h1 {
+	font-family: Studio Feixen Sans Variable;
+	font-variation-settings: "wght" 100, "wdth" 120;
+	font-size: 20vh;
+	text-align: center;
+	color: pink;
+	max-width: 6ch;
+	margin: auto;
+	margin-top: 20vh;
+	
+}
+@keyframes changesize {
+	0% {font-variation-settings: "wght" 100, "wdth" 120;}
+	25%{font-variation-settings: "wght" 800, "wdth" 800; color: pink}
+	50% {font-variation-settings: "wght" 100, "wdth" 120;}
+	75% {font-variation-settings: "wght" 400, "wdth" 420;}
+	100%{font-variation-settings: "wght" 800, "wdth" 800; color: blue}
+	
+}
+
+.flexible{
+	animation-name: changesize;
+	animation-duration: 5s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	
+}
+
+
+h2 {
+	font-family: Studio Feixen Sans Variable;
+	font-size: 4vw;
+	font-variation-settings: "wght" 100, "wdth" 0; color: blue;
+	transition: all .5s ease;
+}
+
+h2:hover{
+	font-variation-settings: "wght" 800, "wdth" 800; color: pink;
+	transition: all .5s ease;
+}
+
+h3 {
+	font-variation-settings: "wght" 800, "wdth" 20; color: blue;
+	font-size: 3.4vw;
+	transition: all .5s ease;
+}
+h3:hover{
+	font-variation-settings: "wght" 800, "wdth" 800;;
+	transition: all .5s ease;
+}
+
+h4{
+	font-family: StudioFeixenSansTrial-EdgyBold;
+	font-size: 2vw;
+	
+}
+h4.micro2{
+	color:pink;
+	border-bottom: solid 1px pink;
+}
+h4.kitefest {
+	font-size: 2.5vw;
+}
+h4.baseballgame{
+	font-size: 2.5vw;
+	border-bottom: dashed 1px;
+	padding: 1em;
+	margin-top: -.5em;
+}
+
+h5.tour_people{
+	text-align: right;
+	font-size: 1.5vw;
+	margin-top: -.5em;
+}
+h6.tour_date{
+	text-align: right;
+	padding: 1em;
+	margin-top: -1em;
+	border: solid 1px white;
+	border-radius: 1vw;
+}
+
+h6.kitedate {
+	position: absolute;
+	width: 90px;
+	height: 30px;
+	z-index: 3;
+/*  padding: 50% 0; */
+	padding: 1em;
+	border-radius: 10vw;
+	text-align: center;
+	
+	font-size: .5em;
+	background-color: blue;
+	color:white;
+	top: 2em;
+	right: 3em;
+}
+h6.baseballgame-date{
+	background-color: pink;
+	border-radius: 10vw;
+}
+
+p {
+	color: darkblue;
+	
+}
+
+footer p { color:white;
+	
+}
+
+p.kite_caption {
+	margin-top:2em;
+
+}
+
+
+/* ----------------- NAVIGATION AND LINKS ----------------- */
+
+
+nav {
+	background-color: blue;
+	padding: 1em;
+	position: sticky;
+	top: 0;
+}
+
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	
+	
+}
+
+nav ul li {
+	list-style: none;
+	
+}
+
+
+nav ul li a {
+	color: white;
+	
+	
+}
+
+
+nav ul li a:link {
+	text-decoration: none;
+	 border-bottom: 1px solid transparent;
+}
+
+
+nav ul li a:visited {
+	
+}
+
+
+nav ul li a:hover {
+	font-family:  StudioFeixenSansTrial-EdgyBook;
+	color: pink;
+	border-bottom: solid 1px pink;
+	transition: all .2s ease;
+}
+
+
+nav ul li a:active {
+	
+}
+
+
+
+/* ----------------- FOOTER AND ITS LINKS ----------------- */
+
+footer {
+	background-color: blue;
+	margin: auto;
+	padding: 2em;
+	color: white;
+	align-items: center;
+		
+}
+
+
+footer a:link {
+	text-decoration: none;
+	color:pink;
+	transition: all .5s ease;
+	
+}
+
+
+footer a:visited {
+	color:pink;
+	
+}
+
+
+footer a:hover {
+	background-color:white;
+	border-radius:20vh;
+	padding: .5em;
+	color:blue;
+	transition: all .5s ease;
+}
+
+
+footer a:active {
+	background-color:pink;
+	border-radius:20vh;
+	color:blue;
+	transition: all .5s ease;
+}
+.backtotop{
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+	color:white;
+}
+.foot{
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+	color:white;
+}
+
+
+/* ----------------- FONTS AND RULES ----------------- */
+.edgy-book{
+	font-family: StudioFeixenSansTrial-EdgyBook; 
+	margin: 0;
+}
+.edgy-bold{
+	font-family: StudioFeixenSansTrial-EdgyBold;
+	margin: 0;
+}
+.serifwriter-bold{
+	font-family: StudioFeixenSerifTrial-WriterBold;
+	margin: 0;
+}
+.serif{
+	font-family:StudioFeixenSerifTrial-Regular;
+	margin: 0;
+}
+.writer{
+	font-family:StudioFeixenSansTrial-WriterRegular;	
+	margin: 0;
+}
+
+
+.small_text{
+	font-size: 1vw;
+}
+.medium_text{
+	font-size: 2vw;
+}
+
+.center{
+	align-content: center;
+	text-align: center;
+}
+.left{
+	align-content: left;
+	text-align: left;
+}
+.right{
+	align-content: right;
+	text-align: right;
+}
+.small{
+	font-size: 3vw;
+}
+.big{
+	font-size: 15vw;
+}
+.medium{
+	font-size: 8vw;
+}
+.italic{
+	font-style: italic;
+}
+
+.pink{
+	color:pink;
+}.parachunk {
+}
