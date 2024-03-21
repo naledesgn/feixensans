@@ -6,13 +6,13 @@
 /* ----------------- FONT FACE ----------------- */
 @font-face {
 	font-family: Studio Feixen Sans Variable;
-	src: url("fonts/Studio\ Feixen\ Sans\ Variable.ttf") format:('truetype');
+	src: url("fonts/Studio Feixen Sans Variable.ttf") format:('truetype');
 	font-weight: 100 800;
 	
 }
 @font-face {
 	font-family: Studio Feixen Sans Variable Trail;
-	src: url("fonts/Studio\ Feixen\ Sans\ Variable\ Trail.ttf") format: ('truetype');
+	src: url("fonts/Studio Feixen Sans Variable Trail.ttf") format: ('truetype');
 	font-weight: 100 800;
 }
 /*edgy*/
