@@ -97,7 +97,7 @@ html{ scroll-behavior: smooth;
 
 body {
 	font-family: Studio Feixen Sans Variable;
-	font-variation-settings: "wght" 100, "wdth" 0; color: blue;
+	font-variation-settings: "wght" 100, "wdth" 0;
 	/*background-color: rgba(24,24,24,1.00);
 	color: white;*/
 	margin: auto;
